@@ -1,0 +1,23 @@
+.pipeline-container {
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  .pipeline {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .data-point {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .data-values p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
