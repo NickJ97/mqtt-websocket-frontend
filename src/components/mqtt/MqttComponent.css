@@ -1,0 +1,105 @@
+/* Contenedor principal */
+.pipeline-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between; /* Alineación para espacios en pantallas grandes */
+}
+
+/* Cada grupo ocupa hasta el 45% del ancho en pantallas grandes */
+.group {
+  flex: 1 1 45%; /* Ocupa hasta el 45% del ancho, permite 2 columnas */
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px; /* Asegura que no sea demasiado pequeño */
+}
+
+/* Título del grupo */
+.group-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de las tarjetas de datos */
+.group-cards {
+  display: flex;
+  flex-direction: row; /* Organiza los elementos en una fila */
+  gap: 1rem;
+  margin-bottom: 1rem; /* Separación entre las filas */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas si es necesario */
+}
+
+/* Estilo de las tarjetas de datos */
+.data-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1; /* Distribuye el espacio entre las tarjetas */
+  min-width: 150px; /* Establece un tamaño mínimo para evitar que se haga demasiado pequeño */
+}
+
+/* Cabecera de cada tarjeta */
+.card-header h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Cuerpo de cada tarjeta */
+.card-body p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Estilo general para el contenedor de tendencias */
+.trend-card {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  height: 900px; 
+  flex: 1; /* Asegura que la tarjeta de tendencia ocupe el espacio disponible */
+  min-width: 320px; /* Evita que la tarjeta se haga demasiado pequeña */
+  box-sizing: border-box;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Asegurar que los grupos ocupen el 100% del ancho en pantallas pequeñas */
+  .group {
+    flex: 1 1 100%;
+  }
+
+  /* Ajustar las tarjetas de datos para que no se desborden */
+  .data-card {
+    min-width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  /* Ajustar la altura de la tarjeta de tendencias para pantallas pequeñas */
+  .trend-card {
+    height: 500px; /* Aumenta la altura de la tarjeta de tendencias en pantallas pequeñas */
+    min-height: 400px; /* Establece una altura mínima en pantallas pequeñas */
+  }
+  .trend-card canvas {
+    height: 90% !important; /* Ocupa toda la altura disponible */
+    width: 90% !important;  /* Ocupa toda la anchura disponible */
+  }
+
+  /* Asegurar que el contenedor de los grupos no se desborde */
+  .group-cards {
+    flex-direction: column; /* Coloca las tarjetas en una columna en pantallas pequeñas */
+    gap: 1rem;
+  }
+}

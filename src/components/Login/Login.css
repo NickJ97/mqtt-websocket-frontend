@@ -1,0 +1,157 @@
+/* Estructura principal */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* Barra lateral */
+.sideBar {
+  width: 15%;
+  background: linear-gradient(to bottom, #0ea5af, #aadf00);
+}
+
+/* Contenido principal */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+/* Contenedor del logo */
+.logoContainer {
+  text-align: center;
+  margin-bottom: -40px;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+/* Contenido centrado */
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Estilos del formulario */
+.form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #0ea5af;
+  font-weight: bold;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #007af0;
+  outline: none;
+}
+
+/* Botones */
+.splitButton {
+  display: flex;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.leftButton,
+.rightButton {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 5px;
+}
+
+.leftButton {
+  background-color: #007af0;
+  color: #fff;
+}
+
+.leftButton:hover {
+  background-color: #005bb5;
+}
+
+.rightButton {
+  background-color: #aadf00;
+  color: #fff;
+}
+
+.rightButton:hover {
+  background-color: #8bbf00;
+}
+
+/* Mensaje de estado */
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.message.success {
+  color: #28a745;
+}
+
+.message.error {
+  color: #dc3545;
+}
+
+/* Imagen del footer */
+.footerImageContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footerImage {
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.footerImage:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
